@@ -138,7 +138,7 @@ session_start();
                    <div class="col-md-12">
                      <div class="card">
                        <div class="card-body">
-                        <form action="updatesql.php?id_barang=<?php echo $_GET['id_barang'] ?>" method="POST" enctype="multipart/form-data">
+                        <form action="proses_update_menu.php?id_menu=<?php echo $_GET['id_menu'] ?>" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                             <label for="nama">Nama Menu</label>
                            <input type="text" name="nama_menu"  class="form-control" placeholder="" id="nama_menu">
