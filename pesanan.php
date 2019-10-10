@@ -145,7 +145,7 @@ session_start();
                     <tr>
                     <br>
                     <br>
-                      <th>Kode Pesanan a</th>
+                      <th>Kode Pesanan</th>
                       <th>Nama Pelanggan</th>
                       <th>Menu</th>
                       <th>Jumlah</th>
