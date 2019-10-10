@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2019 at 02:58 AM
--- Server version: 10.1.26-MariaDB
+-- Generation Time: 10 Okt 2019 pada 08.56
+-- Versi Server: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -25,52 +25,48 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `menu`
+-- Struktur dari tabel `menu`
 --
 
 CREATE TABLE `menu` (
   `id_menu` int(11) NOT NULL,
   `nama_menu` varchar(100) NOT NULL,
-  `harga_menu` int(4) NOT NULL
+  `harga_menu` int(4) NOT NULL,
+  `jumlah_menu_tersedia` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `menu`
+-- Dumping data untuk tabel `menu`
 --
 
-INSERT INTO `menu` (`id_menu`, `nama_menu`, `harga_menu`) VALUES
-(1, 'ayam goreng', 10000),
-(2, 'tahu', 1000),
-(3, 'tempe', 1000),
-(4, 'bebek', 14000),
-(5, 'ayam kecap', 10000),
-(6, 'koloke', 45000);
+INSERT INTO `menu` (`id_menu`, `nama_menu`, `harga_menu`, `jumlah_menu_tersedia`) VALUES
+(4, 'bebek', 14000, 100),
+(5, 'ayam kecap', 10000, 100);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pelanggan`
+-- Struktur dari tabel `pelanggan`
 --
 
 CREATE TABLE `pelanggan` (
   `id_pelanggan` int(11) NOT NULL,
   `nama_pelanggan` varchar(100) DEFAULT NULL,
-  `jenis_kelamin` tinyint(1) DEFAULT NULL
+  `nomor_telepon` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pelanggan`
+-- Dumping data untuk tabel `pelanggan`
 --
 
-INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `jenis_kelamin`) VALUES
-(1, 'arik', 0),
-(2, 'rizaldi', 0),
-(3, 'awe', 0);
+INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `nomor_telepon`) VALUES
+(1, 'arik', '0819998887'),
+(2, 'rizaldi', '0896782341');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pesanan`
+-- Struktur dari tabel `pesanan`
 --
 
 CREATE TABLE `pesanan` (
@@ -86,7 +82,7 @@ CREATE TABLE `pesanan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi`
+-- Struktur dari tabel `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -100,7 +96,7 @@ CREATE TABLE `transaksi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -110,7 +106,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`) VALUES
